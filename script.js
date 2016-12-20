@@ -1,18 +1,19 @@
 window.onload = function () {
-    function printObject(obj) {
-        var res = "<ul>";
-        for (i in obj) {
-            res += "<li><b>" + i + "</b>: " + obj[i] + "</li>";
-        }
-        res += "</ul>";
-        document.write(res);
-    }
-
     var div1 = document.body.children[0];
-    // printObject(div1);
-    // printObject(div1.style);
-    div1.onclick = function(){
-        div1.style.backgroundColor = "red";
-        div1.title = "Товар у Вас в корзине";
-    };
+    // div1.onclick = function (e) {
+    //     console.log(e);
+    //     div1.style.fontSize = "30px";
+    // };
+    // div1.onmouseenter = function () {
+    //     div1.style.color = "red";
+    // };
+    // div1.onmouseleave = function () {
+    //     div1.style.color = "black";
+    // };
+    var divs = div1.children;
+    for (var i = 0; i < divs.length; i++) {
+        divs[i].onclick = function () {
+            this.style.backgroundColor = "red";
+        };
+    }
 };

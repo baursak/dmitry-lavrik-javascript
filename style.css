@@ -1,0 +1,6 @@
+div{
+    border: 1px solid teal;
+}
+div div{
+    border: 2px solid pink;
+}
