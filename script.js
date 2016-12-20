@@ -1,18 +1,20 @@
 window.onload = function () {
-    var div1 = document.body.children[0];
-    // div1.onclick = function (e) {
-    //     console.log(e);
-    //     div1.style.fontSize = "30px";
+    /* получение элемента по id */
+    // var div1 = document.getElementById("first");
+    // div1.onclick = function(){
+    //     this.style.backgroundColor = "red";
     // };
-    // div1.onmouseenter = function () {
-    //     div1.style.color = "red";
-    // };
-    // div1.onmouseleave = function () {
-    //     div1.style.color = "black";
-    // };
-    var divs = div1.children;
-    for (var i = 0; i < divs.length; i++) {
-        divs[i].onclick = function () {
+    /* выборка элементов по классу */
+    // var divs = document.getElementsByClassName("item");
+    // for (var i = 0; i < divs.length; i++) {
+    //     divs[i].onclick = function () {
+    //         this.style.backgroundColor = "red";
+    //     };
+    // }
+    /* выборка элементов по тэгу */
+    var ps = document.getElementsByTagName("p");
+    for (var i = 0; i < ps.length; i++) {
+        ps[i].onclick = function () {
             this.style.backgroundColor = "red";
         };
     }

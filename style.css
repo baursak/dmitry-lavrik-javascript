@@ -1,6 +1,7 @@
 div{
     border: 1px solid teal;
+    margin: 20px;
 }
-div div{
-    border: 2px solid pink;
+p{
+    border: 1px solid pink;
 }
