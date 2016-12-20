@@ -1,9 +1,20 @@
 window.onload = function () {
-    var inner = document.querySelectorAll(".item div");
-    var i;
-    for (i = 0; i < inner.length; i++) {
-        inner[i].onclick = function () {
-            this.style.backgroundColor = "red";
-        };
-    }
+    var images = [
+        'Chrysanthemum.jpg',
+        'Desert.jpg',
+        'Jellyfish.jpg',
+        'Penguins.jpg',
+        'Tulips.jpg'
+    ];
+    var i = 0;
+    var img = document.querySelector("#slider img");
+    img.src = "img/" + images[i];
+    document.querySelector("#btnPrev").onclick = function () {
+        (i > 1) ? i-- : (i = images.length - 1);
+        img.src = "img/" + images[i];
+    };
+    document.querySelector("#btnNext").onclick = function () {
+        (i < (images.length - 1)) ? i++ : i = 0;
+        img.src = "img/" + images[i];
+    };
 };
