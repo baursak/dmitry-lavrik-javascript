@@ -1,12 +1,8 @@
-#slider {
-    width: 400px;
+.item{
+    cursor: pointer;
+    background-color: #EEE;
 }
-
-#slider img {
-    width: 100%;
-    height: 300px;
-}
-
-#buttons {
-    text-align: center;
+.answer{
+    margin-left: 20px;
+    display: none;
 }
