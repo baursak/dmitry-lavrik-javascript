@@ -7,6 +7,15 @@ window.onload = function () {
                 answer.style.display = "none";
             } else {
                 answer.style.display = "block";
+                var op = 0;
+                var step = 0.005;
+                var steps = 1 / step;
+                var timer = setInterval(function () {
+                    op += step;
+                    steps--;
+                    answer.style.opacity = op;
+                    if (steps == 0) clearInterval(timer);
+                }, 20);
             }
         };
     }
